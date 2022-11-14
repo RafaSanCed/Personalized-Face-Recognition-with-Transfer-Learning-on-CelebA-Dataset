@@ -14,10 +14,11 @@ por la dirección completa de la ruta de acceso.
 
 
 <!--ts-->
-   * [Installation](#installation)
-   * [Usage](#usage)
-      * [STDIN](#stdin)
-      * [Local files](#local-files)
+   <!--ts-->
+   * [Data](#Data)
+      * [Raw](#Raw)
+      * [Processed](#Processed)
+          *[img_align_celeba](#img_align_celeba)
       * [Remote files](#remote-files)
       * [Multiple files](#multiple-files)
       * [Combo](#combo)
