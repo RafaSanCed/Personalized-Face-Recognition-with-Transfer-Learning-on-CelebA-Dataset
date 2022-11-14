@@ -14,9 +14,9 @@ por la dirección completa de la ruta de acceso.
 
 
 
-[TOC]
 
-#Data|
+
+# Data
 Aquí colocamos todas las bases de datos. A partir de bases de datos enteras se van generando separaciones de test y train en las notebooks de la sección *Creating Dataset*.
 ##Raw
 En esta sección se encuentran los atributos de las imágenes CelebA en formato .txt
