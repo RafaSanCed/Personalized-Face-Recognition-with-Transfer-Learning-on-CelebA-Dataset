@@ -6,7 +6,7 @@ En este proyecto se usan de base modelos de redes neuonrales convolucionales par
 - El proyecto está diseñado para su reproducción total
 - En algunos casos será necesario cambiar las rutas de acceso principales, por ejemplo, en la notebook llamado *Moving_CelebA_photos.py* será necesario cambiar: 
 ```python
-mypath='../../../Data/Processed/img_align_celeba/'
+mypath = '../../../Data/Processed/img_align_celeba/'
 ```
 por la dirección completa de la ruta de acceso.
 
