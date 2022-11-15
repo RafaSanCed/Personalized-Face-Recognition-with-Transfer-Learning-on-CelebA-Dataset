@@ -48,13 +48,13 @@ Esto último se hizo para disminuir el número de atributos de 41 a 32 además d
 ### img_align_celeba
 Aquí se encuentra la base de datos completa de CelebA.
 ### img_prop
-Se encuentran imágenes que se usaron de prueba para los modelos.
+Se encuentran imágenes que se usaron como prueba para los modelos.
 ##Recognize_me
 En esta sección se encuentran las bases de datos necesarias para entrenar, validar y testear los modelos del reconocimiento de mis propias imágenes.
 ### Others
-En esta sección se encuentra una pequeña sección tomada aleatoriamente de la base de datos CelebA. Aunque se tomó de manera aleatoria, se pueden obtener las mismas imágenes de todo el dataset con la notebook *Moving_CelebA_photos.ipynb*.
+En esta sección se encuentran fotos tomada aleatoriamente de la base de datos CelebA. Aunque se tomó de manera aleatoria, se pueden obtener las mismas imágenes con la notebook *Moving_CelebA_photos.ipynb*.
 ### Total_Me
-Aquí se guardaron unas cuantas imágenes mías para el uso de los modelos de clasificación de mis imágenes. 
+Aquí se guardaron unas cuantas imágenes mías para su uso en los modelos de clasificación de mis imágenes. 
 ### Test
 Aquí se guardaron imágenes tomadas de forma aleatorias de la base de datos *Total_Me* para ser los datos de testeo de los modelos. Se pueden obtener los mismos resultados con la notebook *Moving_photos_of_me.ipynb*
 #### Me 
@@ -78,7 +78,7 @@ Imágenes propias de validación
 Imágenes de otras personas de validación
 
 # Notebooks
-En esta sección se encuentran todas las notebooks para este proyecto. Si lo queremos ver en orden cronológico, primero se hizo el *Data cleaning* de los datos de CelebA para que sean los datos de entrenamiento, validación y testeo en Primer, Segundo, Tercer y Cuarto Modelo. 
+En esta sección se encuentran todas las notebooks para este proyecto. Primero se hizo el *Data cleaning* de los datos de CelebA para que sean los datos de entrenamiento, validación y testeo en Primer, Segundo, Tercer y Cuarto Modelo. 
 
 Después en *Reconcomiento Propio* se encuentra todo lo necesario para hacer la clasificació de imágenes de mi persona con la de otras personas
 ## Data cleaning
