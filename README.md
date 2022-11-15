@@ -32,8 +32,8 @@ por la dirección completa de la ruta de acceso.
   * [Reconocimiento_Propio](#Reconocimiento_Propio)
     + [Creating_Dataset](#Creating_Dataset)
     + [Models](#Models)
-      ** [FE_model2](#FE_model2)
-      ** [FT_model2](#FT_model2)
+      * [FE_model2](#FE_model2)
+      * [FT_model2](#FT_model2)
     
 
 
