@@ -29,8 +29,8 @@ por la dirección completa de la ruta de acceso.
   * [Segundo_Modelo](#Segundo_Modelo)
   * [Tercer_Modelo](#Tercer_Modelo)
   * [Cuarto_Modelo](#Cuarto_Modelo)
-  * [Reconocimiento Propio](#Reconocimiento Propio)
-    + [Creating Dataset](#Creating Dataset)
+  * [Reconocimiento_Propio](#Reconocimiento_Propio)
+    + [Creating_Dataset](#Creating_Dataset)
     + [Models](#Models)
       *[FE_model2](#FE_model2)
       *[FT_model2](#FT_model2)
@@ -129,9 +129,9 @@ class ResidualUnit(keras.layers.Layer):
         return self.activation(keras.layers.add([x, skip_x]))
 
 ```
-## Reconocimiento propio
+## Reconocimiento_propio
 En esta sección se crean los modelos y se separan los datos para la clasificación de imágenes de mi persona. Cabe resaltar que está hecho para que siempre las imágenes se separen de la misma manera cada vez que se corren las notebook, esto para su reproducibilidad.
-### Creating Dataset
+### Creating_Dataset
 Aquí se crean todas las bases de datos (train, test, validation) para la clasificación de imágenes mías. 
 ### Models
 Se crean dos modelos, uno que utiliza la técina de Feature Extraction y otro que utiliza la técnica de Fine Tuning:
