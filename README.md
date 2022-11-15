@@ -20,21 +20,21 @@ por la dirección completa de la ruta de acceso.
     + [Others](#Others)
     + [Total_Me](#Total_Me)
     + [Test](#Test)
-      - [Me](#Me)
-      - [Others](#Others)
     + [Train](#Train)
-      - [Me](#Me)
-      - [Others](#Others)
     + [Val](#Val)
-      - [Me](#Me)
-      - [Others](#Others)
     
-- [Heading](#heading-2)
-  * [Sub-heading](#sub-heading-2)
-    + [Sub-sub-heading](#sub-sub-heading-2)
-
-
-
+- [Notebooks](#Notebooks)
+  * [Data cleaning](#Data cleaning)
+  * [Primer Modelo](#Primer Modelo)
+  * [Segundo Modelo](#Segundo Modelo)
+  * [Tercer Modelo](#Tercer Modelo)
+  * [Cuarto Modelo](#Cuarto Modelo)
+  * [Reconocimiento Propio](#Reconocimiento Propio)
+    + [Creating Dataset](#Creating Dataset)
+    + [Models](#Models)
+      *[FE_model2](#FE_model2)
+      *[FT_model2](#FT_model2)
+    
 
 
 # Data
@@ -80,7 +80,7 @@ Imágenes de otras personas de validación
 #Notebooks
 En esta sección se encuentran todas las notebooks para este proyecto. Si lo queremos ver en orden cronológico, primero se hizo el *Data cleaning* de los datos de CelebA para que sean los datos de entrenamiento, validación y testeo en Primer, Segundo, Tercer y Cuarto Modelo. 
 
-Después een *Reconcomiento Propio* se encuentra todo lo necesario para hacer la clasificació de imágenes de mi persona con la de otras personas
+Después en *Reconcomiento Propio* se encuentra todo lo necesario para hacer la clasificació de imágenes de mi persona con la de otras personas
 ## Data cleaning
 Aquí se crean las notebooks para modificar los datos de los atributos de las imágenes de CelebA. Primero se pasa del archivo .txt de los atributos de CelebA a uno .csv para poder alimentar a los modelos en la notebook llamada *Conversion_csv.ipynb*. 
 
