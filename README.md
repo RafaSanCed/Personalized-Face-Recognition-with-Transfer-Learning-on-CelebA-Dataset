@@ -77,7 +77,7 @@ Imágenes propias de validación
 #### Others
 Imágenes de otras personas de validación
 
-#Notebooks
+# Notebooks
 En esta sección se encuentran todas las notebooks para este proyecto. Si lo queremos ver en orden cronológico, primero se hizo el *Data cleaning* de los datos de CelebA para que sean los datos de entrenamiento, validación y testeo en Primer, Segundo, Tercer y Cuarto Modelo. 
 
 Después en *Reconcomiento Propio* se encuentra todo lo necesario para hacer la clasificació de imágenes de mi persona con la de otras personas
