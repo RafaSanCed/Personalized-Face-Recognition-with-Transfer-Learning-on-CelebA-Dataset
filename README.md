@@ -135,8 +135,9 @@ En esta sección se crean los modelos y se separan los datos para la clasificaci
 Aquí se crean todas las bases de datos (train, test, validation) para la clasificación de imágenes mías. 
 ### Models
 Se crean dos modelos, uno que utiliza la técina de Feature Extraction y otro que utiliza la técnica de Fine Tuning:
-<p align="center">
 [![](https://miro.medium.com/max/896/1*01aITXnKNAleWAd-lcSxLQ.png)](http://https://miro.medium.com/max/896/1*01aITXnKNAleWAd-lcSxLQ.png)
+<p align="center">
+   <img width="460" height="300" src="http://[www.fillmurray.com/460/300](https://miro.medium.com/max/896/1*01aITXnKNAleWAd-lcSxLQ.png)">
 </p>
 #### FE_model2
 Se crea y se evalúa el modelo creado utilizando Feature Extraction
