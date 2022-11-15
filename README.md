@@ -20,7 +20,7 @@ por la dirección completa de la ruta de acceso.
     + [Others](#Others)
     + [Total_Me](#Total_Me)
     + [Test](#Test)
-      ° [Me](#Others)
+      - [Me](#Others)
 - [Heading](#heading-2)
   * [Sub-heading](#sub-heading-2)
     + [Sub-sub-heading](#sub-sub-heading-2)
