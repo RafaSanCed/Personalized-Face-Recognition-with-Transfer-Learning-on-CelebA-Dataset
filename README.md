@@ -12,8 +12,30 @@ por la dirección completa de la ruta de acceso.
 
 **Tabla de contenido**
 
-
-
+- [Data](#Data)
+  * [Raw](#Raw)
+    + [img_align_celeba](#img_align_celeba)
+    + [img_prop](#img_prop)
+  * [Recognize_me](#Recognize_me)
+    + [Others](#Others)
+    + [Total_Me](#Total_Me)
+    + [Test](#Test)
+    + [Train](#Train)
+    + [Val](#Val)
+    
+- [Notebooks](#Notebooks)
+  * [Data_cleaning](#Data_cleaning)
+  * [Primer_Modelo](#Primer_Modelo)
+  * [Segundo_Modelo](#Segundo_Modelo)
+  * [Tercer_Modelo](#Tercer_Modelo)
+  * [Cuarto_Modelo](#Cuarto_Modelo)
+  * [Quinto_Modelo](#Quinto_Modelo)
+  * [Reconocimiento_Propio](#Reconocimiento_Propio)
+    + [Creating_Dataset](#Creating_Dataset)
+    + [Models](#Models)
+      * [FE_model2](#FE_model2)
+      * [FT_model2](#FT_model2)
+    
 
 
 # Data
@@ -27,13 +49,13 @@ Esto último se hizo para disminuir el número de atributos de 41 a 32 además d
 ### img_align_celeba
 Aquí se encuentra la base de datos completa de CelebA.
 ### img_prop
-Se encuentran imágenes que se usaron de prueba para los modelos.
+Se encuentran imágenes que se usaron como prueba para los modelos.
 ##Recognize_me
 En esta sección se encuentran las bases de datos necesarias para entrenar, validar y testear los modelos del reconocimiento de mis propias imágenes.
 ### Others
-En esta sección se encuentra una pequeña sección tomada aleatoriamente de la base de datos CelebA. Aunque se tomó de manera aleatoria, se pueden obtener las mismas imágenes de todo el dataset con la notebook *Moving_CelebA_photos.ipynb*.
+En esta sección se encuentran fotos tomada aleatoriamente de la base de datos CelebA. Aunque se tomó de manera aleatoria, se pueden obtener las mismas imágenes con la notebook *Moving_CelebA_photos.ipynb*.
 ### Total_Me
-Aquí se guardaron unas cuantas imágenes mías para el uso de los modelos de clasificación de mis imágenes. 
+Aquí se guardaron unas cuantas imágenes mías para su uso en los modelos de clasificación de mis imágenes. 
 ### Test
 Aquí se guardaron imágenes tomadas de forma aleatorias de la base de datos *Total_Me* para ser los datos de testeo de los modelos. Se pueden obtener los mismos resultados con la notebook *Moving_photos_of_me.ipynb*
 #### Me 
@@ -56,21 +78,21 @@ Imágenes propias de validación
 #### Others
 Imágenes de otras personas de validación
 
-#Notebooks
-En esta sección se encuentran todas las notebooks para este proyecto. Si lo queremos ver en orden cronológico, primero se hizo el *Data cleaning* de los datos de CelebA para que sean los datos de entrenamiento, validación y testeo en Primer, Segundo, Tercer y Cuarto Modelo. 
+# Notebooks
+En esta sección se encuentran todas las notebooks para este proyecto. Primero se hizo el *Data cleaning* de los datos de CelebA para que sean los datos de entrenamiento, validación y testeo en Primer, Segundo, Tercer y Cuarto Modelo. 
 
-Después een *Reconcomiento Propio* se encuentra todo lo necesario para hacer la clasificació de imágenes de mi persona con la de otras personas
-## Data cleaning
+Después en *Reconcomiento Propio* se encuentra todo lo necesario para hacer la clasificació de imágenes de mi persona con la de otras personas
+## Data_cleaning
 Aquí se crean las notebooks para modificar los datos de los atributos de las imágenes de CelebA. Primero se pasa del archivo .txt de los atributos de CelebA a uno .csv para poder alimentar a los modelos en la notebook llamada *Conversion_csv.ipynb*. 
 
 En la notebook llamada *Exploratory Data Analisis.ipynb* se cambian los -1 por 0 para poder utilizar la métrica *binary_crossentropy* además de que se disminuyen los atributos de 41 a 32. 
-## Primer Modelo
+## Primer_Modelo
 Se crea, guarda y testea el primer modelo usando redes convolucionales para la clasificación de las imágenes de CelebA.
-## Segundo Modelo
+## Segundo_Modelo
 Se mejora el primer modelo usando callbacks para disminuir el *learning rate* a través de las épocas y se crea un *early stop* para evitar el sobreajuste.
-## Tercer Modelo
+## Tercer_Modelo
 Se separan los datos de testeo del modelo y se itroduce un treshold a la métrica *BinaryCrossentropy* ya que se percató que los datos estaban sesgados, siendo el 78% ceros.
-## Cuarto Modelo
+## Cuarto_Modelo
 Se utiliza la estructura de las resnet para poder aumentar los parámetros entrenables sin que el modelo sobreajuste:
 ```python
 class ResidualUnit(keras.layers.Layer):
@@ -106,11 +128,12 @@ class ResidualUnit(keras.layers.Layer):
             skip_x = layer(skip_x)
     
         return self.activation(keras.layers.add([x, skip_x]))
-
 ```
-## Reconocimiento propio
+## Quinto_Modelo
+Se utiliza la técnica de Fine Tuning para el modelo de CelebA, utilizando la red neuronal [VGG16](https://keras.io/api/applications/vgg/ "VGG16") previamente entrenada. El model VGG16 es una red de 16 capas propuesta por Karen Simonyan y Andrew Zisserman en su artículo "*[Very Deep Convolutional Networks for Large-Scale Image Recognition](https://ui.adsabs.harvard.edu/abs/2014arXiv1409.1556S/abstract "Very Deep Convolutional Networks for Large-Scale Image Recognition")*".
+## Reconocimiento_propio
 En esta sección se crean los modelos y se separan los datos para la clasificación de imágenes de mi persona. Cabe resaltar que está hecho para que siempre las imágenes se separen de la misma manera cada vez que se corren las notebook, esto para su reproducibilidad.
-### Creating Dataset
+### Creating_Dataset
 Aquí se crean todas las bases de datos (train, test, validation) para la clasificación de imágenes mías. 
 ### Models
 Se crean dos modelos, uno que utiliza la técina de Feature Extraction y otro que utiliza la técnica de Fine Tuning:
