@@ -130,7 +130,7 @@ class ResidualUnit(keras.layers.Layer):
         return self.activation(keras.layers.add([x, skip_x]))
 ```
 ## Quinto_Modelo
-Se utiliza la técnica de Fine Tuning para el modelo de CelebA, utilizando la red neuronal [VGG16](https://keras.io/api/applications/vgg/ "VGG16") previamente entrenada. El model VGG16 es una red de 16 capas propuesta por Karen Simonyan y Andrew Zisserman en su artículo *[Very Deep Convolutional Networks for Large-Scale Image Recognition](https://ui.adsabs.harvard.edu/abs/2014arXiv1409.1556S/abstract "Very Deep Convolutional Networks for Large-Scale Image Recognition")*.
+Se utiliza la técnica de Fine Tuning para el modelo de CelebA, utilizando la red neuronal [VGG16](https://keras.io/api/applications/vgg/ "VGG16") previamente entrenada. El model VGG16 es una red de 16 capas propuesta por Karen Simonyan y Andrew Zisserman en su artículo "*[Very Deep Convolutional Networks for Large-Scale Image Recognition](https://ui.adsabs.harvard.edu/abs/2014arXiv1409.1556S/abstract "Very Deep Convolutional Networks for Large-Scale Image Recognition")*".
 ## Reconocimiento_propio
 En esta sección se crean los modelos y se separan los datos para la clasificación de imágenes de mi persona. Cabe resaltar que está hecho para que siempre las imágenes se separen de la misma manera cada vez que se corren las notebook, esto para su reproducibilidad.
 ### Creating_Dataset
