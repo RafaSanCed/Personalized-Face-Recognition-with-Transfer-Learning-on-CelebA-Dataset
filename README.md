@@ -24,7 +24,7 @@ por la dirección completa de la ruta de acceso.
     + [Val](#Val)
     
 - [Notebooks](#Notebooks)
-  * [Data_cleaning](#Data_cleaning)
+  * [Data cleaning](#Data cleaning)
   * [Primer_Modelo](#Primer_Modelo)
   * [Segundo_Modelo](#Segundo_Modelo)
   * [Tercer_Modelo](#Tercer_Modelo)
