@@ -24,13 +24,13 @@ por la dirección completa de la ruta de acceso.
     + [Val](#Val)
     
 - [Notebooks](#Notebooks)
-  * [Data-cleaning](#Data cleaning)
-  * [Primer-Modelo](#Primer_Modelo)
-  * [Segundo-Modelo](#Segundo_Modelo)
-  * [Tercer-Modelo](#Tercer_Modelo)
-  * [Cuarto-Modelo](#Cuarto_Modelo)
-  * [Quinto-Modelo](#Quinto_Modelo)
-  * [Reconocimiento-Propio](#Reconocimiento_Propio)
+  * [Data_cleaning](#Data_cleaning)
+  * [Primer_Modelo](#Primer_Modelo)
+  * [Segundo_Modelo](#Segundo_Modelo)
+  * [Tercer_Modelo](#Tercer_Modelo)
+  * [Cuarto_Modelo](#Cuarto_Modelo)
+  * [Quinto_Modelo](#Quinto_Modelo)
+  * [Reconocimiento_Propio](#Reconocimiento_Propio)
     + [Creating_Dataset](#Creating_Dataset)
     + [Models](#Models)
       * [FE_model2](#FE_model2)
@@ -82,17 +82,17 @@ Imágenes de otras personas de validación
 En esta sección se encuentran todas las notebooks para este proyecto. Primero se hizo el *Data cleaning* de los datos de CelebA para que sean los datos de entrenamiento, validación y testeo en Primer, Segundo, Tercer y Cuarto Modelo. 
 
 Después en *Reconcomiento Propio* se encuentra todo lo necesario para hacer la clasificació de imágenes de mi persona con la de otras personas
-## Data cleaning
+## Data_cleaning
 Aquí se crean las notebooks para modificar los datos de los atributos de las imágenes de CelebA. Primero se pasa del archivo .txt de los atributos de CelebA a uno .csv para poder alimentar a los modelos en la notebook llamada *Conversion_csv.ipynb*. 
 
 En la notebook llamada *Exploratory Data Analisis.ipynb* se cambian los -1 por 0 para poder utilizar la métrica *binary_crossentropy* además de que se disminuyen los atributos de 41 a 32. 
-## Primer-Modelo
+## Primer_Modelo
 Se crea, guarda y testea el primer modelo usando redes convolucionales para la clasificación de las imágenes de CelebA.
-## Segundo-Modelo
+## Segundo_Modelo
 Se mejora el primer modelo usando callbacks para disminuir el *learning rate* a través de las épocas y se crea un *early stop* para evitar el sobreajuste.
-## Tercer-Modelo
+## Tercer_Modelo
 Se separan los datos de testeo del modelo y se itroduce un treshold a la métrica *BinaryCrossentropy* ya que se percató que los datos estaban sesgados, siendo el 78% ceros.
-## Cuarto-Modelo
+## Cuarto_Modelo
 Se utiliza la estructura de las resnet para poder aumentar los parámetros entrenables sin que el modelo sobreajuste:
 ```python
 class ResidualUnit(keras.layers.Layer):
@@ -129,7 +129,7 @@ class ResidualUnit(keras.layers.Layer):
     
         return self.activation(keras.layers.add([x, skip_x]))
 ```
-## Quinto-Modelo
+## Quinto_Modelo
 Se utiliza la técnica de Fine Tuning para el modelo de CelebA, utilizando la red neuronal [VGG16](https://keras.io/api/applications/vgg/ "VGG16") previamente entrenada. El model VGG16 es una red de 16 capas propuesta por Karen Simonyan y Andrew Zisserman en su artículo *[Very Deep Convolutional Networks for Large-Scale Image Recognition](https://ui.adsabs.harvard.edu/abs/2014arXiv1409.1556S/abstract "Very Deep Convolutional Networks for Large-Scale Image Recognition")*.
 ## Reconocimiento_propio
 En esta sección se crean los modelos y se separan los datos para la clasificación de imágenes de mi persona. Cabe resaltar que está hecho para que siempre las imágenes se separen de la misma manera cada vez que se corren las notebook, esto para su reproducibilidad.
